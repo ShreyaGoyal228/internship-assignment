@@ -1,10 +1,7 @@
 import { HtmlQuizCard } from "@/components/html-quiz-card";
 import { QuickStatsCard } from "@/components/quick-stats-card";
-import { Header } from "@/components/shared/header";
-import { Sidebar } from "@/components/shared/sidebar";
 import { SyllabusAnalysisCard } from "@/components/syallbus-wise-analysis";
 
-import Image from "next/image";
 
 export default function Home() {
     return (

@@ -1,1 +1,3 @@
-const UpdateScoreForm = () => {};
+export const UpdateScoreForm = () => {
+    return <>heyy</>;
+};
