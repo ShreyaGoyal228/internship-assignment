@@ -1,6 +1,6 @@
 "use client";
 import { useState } from "react";
-import { AlertDialog, AlertDialogCancel, AlertDialogAction, AlertDialogFooter, AlertDialogContent } from "./ui/alert-dialog";
+import { AlertDialog, AlertDialogContent } from "./ui/alert-dialog";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
@@ -34,10 +34,10 @@ export function HtmlQuizCard() {
             <AlertDialog open={open} onOpenChange={setOpen}>
                 <AlertDialogContent>
                     <UpdateScoresCard />
-                    <AlertDialogFooter>
+                    {/* <AlertDialogFooter>
                         <AlertDialogCancel>Cancel</AlertDialogCancel>
                         <AlertDialogAction>Continue</AlertDialogAction>
-                    </AlertDialogFooter>
+                    </AlertDialogFooter> */}
                 </AlertDialogContent>
             </AlertDialog>
         </>

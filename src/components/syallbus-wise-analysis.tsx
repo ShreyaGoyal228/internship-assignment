@@ -37,18 +37,16 @@ export function SyllabusAnalysisCard() {
             </CardHeader>
             <CardContent className="pb-12 px-8">
                 <div className="space-y-8">
-                    {syallbusAnalysisContent.map((item) => (
-                        <>
-                            <div className="flex flex-col gap-3 justify-start ">
-                                <div className="font-medium text-gray-500 text-lg 2xl:text-xl">{item.heading}</div>
-                                <div className="flex items-center justify-between">
-                                    <div className={`w-2/3 ${item.colorBarBg} rounded-full h-2.5`}>
-                                        <div className={`h-2.5 rounded-full ${item.colorBar}`} style={{ width: item.percentage }}></div>
-                                    </div>
-                                    <div className={`text-base 2xl:text-xl font-bold ${item.colorText}`}>{item.percentage}</div>
+                    {syallbusAnalysisContent.map((item, index) => (
+                        <div key={index} className="flex flex-col gap-3 justify-start ">
+                            <div className="font-medium text-gray-500 text-lg 2xl:text-xl">{item.heading}</div>
+                            <div className="flex items-center justify-between">
+                                <div className={`w-2/3 ${item.colorBarBg} rounded-full h-2.5`}>
+                                    <div className={`h-2.5 rounded-full ${item.colorBar}`} style={{ width: item.percentage }}></div>
                                 </div>
+                                <div className={`text-base 2xl:text-xl font-bold ${item.colorText}`}>{item.percentage}</div>
                             </div>
-                        </>
+                        </div>
                     ))}
                 </div>
             </CardContent>

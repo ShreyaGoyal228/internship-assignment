@@ -1,3 +1,4 @@
+import { UpdateScoreForm } from "./form/update-score-form";
 import { Card, CardHeader, CardContent, CardTitle } from "./ui/card";
 import Image from "next/image";
 
@@ -11,9 +12,7 @@ export function UpdateScoresCard() {
                 </div>
             </CardHeader>
             <CardContent className="space-y-4">
-                {/* <ScoreUpdateRow number={1} label="Update your rank" />
-                <ScoreUpdateRow number={2} label="Update your percentile" />
-                <ScoreUpdateRow number={3} label="Update your current score" /> */}
+                <UpdateScoreForm />
             </CardContent>
         </Card>
     );
