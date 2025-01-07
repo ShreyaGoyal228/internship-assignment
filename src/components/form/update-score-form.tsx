@@ -7,7 +7,6 @@ import { Form, FormControl, FormField, FormItem, FormLabel, FormMessage } from "
 import { Input } from "../ui/input";
 import { Button } from "../ui/button";
 import { useScoreStore } from "@/store/scoreStore";
-import { useCallback } from "react";
 
 export const UpdateScoreForm = ({ handleClose }: { handleClose: () => void }) => {
     const updateQuizData = useScoreStore((state) => state.updateQuizData);
