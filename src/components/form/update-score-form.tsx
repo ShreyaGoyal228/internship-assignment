@@ -26,6 +26,15 @@ export const UpdateScoreForm = ({ handleClose }: { handleClose: () => void }) =>
         handleClose();
         console.log("html quiz data updated and the data is", quizData);
     }
+
+    function handleCancel () {
+        form.reset({
+            rank:quizData.rank,
+            percentile:quizData.percentile,
+            score:quizData.score
+        })
+        handleClose();
+    }
     return (
         <>
             <Form {...form}>
@@ -77,7 +86,7 @@ export const UpdateScoreForm = ({ handleClose }: { handleClose: () => void }) =>
                                 </div> 
                                 <div>
                                 <FormControl>
-                                    <Input type="number" {...field} onChange={field.onChange} />
+                                    <Input type="number" {...field} />
                                 </FormControl>
                                 <FormMessage />
                                 </div>
@@ -85,7 +94,7 @@ export const UpdateScoreForm = ({ handleClose }: { handleClose: () => void }) =>
                         )}
                     />
                     <div className="flex items-center justify-end gap-3">
-                    <Button variant={"mainOutlineBtn"} onClick={() => handleClose}>Cancel</Button>
+                    <Button variant={"mainOutlineBtn"} onClick={handleCancel}>Cancel</Button>
                     <Button type="submit" variant={"mainBtn"}>Submit</Button>
                     </div>
                 </form>
