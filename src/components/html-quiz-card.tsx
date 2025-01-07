@@ -1,10 +1,12 @@
 "use client";
 import { useState } from "react";
-import { AlertDialog, AlertDialogContent } from "./ui/alert-dialog";
+import { AlertDialog, AlertDialogContent, AlertDialogDescription, AlertDialogTitle } from "./ui/alert-dialog";
 import { Button } from "./ui/button";
 import { Card, CardContent } from "./ui/card";
 import Image from "next/image";
 import { UpdateScoresCard } from "./update-score-card";
+import { VisuallyHidden } from '@radix-ui/react-visually-hidden';
+
 export function HtmlQuizCard() {
     const [open, setOpen] = useState<boolean>(false);
 
@@ -22,9 +24,8 @@ export function HtmlQuizCard() {
                                 <p className="text-base 2xl:text-lg text-gray-600">Questions: 08 | Duration: 15mins | Submitted on 5 June 2021</p>
                             </div>
                         </div>
-                        <Button
+                        <Button variant="mainBtn" size="sm"
                             onClick={() => setOpen(!open)}
-                            className="px-6 py-5 2xl:px-8 2xl:py-6 font-bold text-sm 2xl:text-base bg-blue-900 text-white border-2 border-black hover:bg-blue-800"
                         >
                             Update
                         </Button>
@@ -32,12 +33,12 @@ export function HtmlQuizCard() {
                 </CardContent>
             </Card>
             <AlertDialog open={open} onOpenChange={setOpen}>
-                <AlertDialogContent>
-                    <UpdateScoresCard />
-                    {/* <AlertDialogFooter>
-                        <AlertDialogCancel>Cancel</AlertDialogCancel>
-                        <AlertDialogAction>Continue</AlertDialogAction>
-                    </AlertDialogFooter> */}
+                <AlertDialogContent aria-describedby="score-card-description" className="w-[60%] xl:w-1/2 2xl:w-[40%]">
+                    <VisuallyHidden id="score-card-description">
+                        <AlertDialogTitle>Update quiz score form</AlertDialogTitle>
+                        <AlertDialogDescription>Update quiz scores and feedback for HTML assessment</AlertDialogDescription>
+                    </VisuallyHidden>
+                    <UpdateScoresCard handleCloseDialog={() => setOpen(false)} />
                 </AlertDialogContent>
             </AlertDialog>
         </>

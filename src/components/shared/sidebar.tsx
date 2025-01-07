@@ -13,7 +13,7 @@ export function Sidebar() {
 
     return (
         <>
-            <aside className="xl:w-56 2xl:w-[400px] bg-gray-100 h-screen py-6 pr-3 border-r  ">
+            <aside className="hidden lg:block lg:w-[300px] 2xl:w-[400px] bg-gray-100 h-screen py-6 pr-3 border-r">
                 {sidebarItems.map((item) => (
                     <button
                         key={item.name}
@@ -22,8 +22,8 @@ export function Sidebar() {
                         }`}
                         onClick={() => setSelected(item.name)}
                     >
-                        <item.icon className="h-5 w-5 mr-4" />
-                        {item.name}
+                        <item.icon className="size-5 2xl:size-7 mr-4" />
+                        <span className="text-base 2xl:text-lg">{item.name}</span>
                     </button>
                 ))}
             </aside>
