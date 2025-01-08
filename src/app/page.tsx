@@ -1,6 +1,6 @@
 import { HtmlQuizCard } from "@/components/html-quiz-card";
+import { QuestionAnalysisCard } from "@/components/question-analysis";
 import { QuickStatsCard } from "@/components/quick-stats-card";
-import { QuestionAnalysisCard } from "@/components/shared/question-analysis";
 import { SyllabusAnalysisCard } from "@/components/syallbus-wise-analysis";
 
 
