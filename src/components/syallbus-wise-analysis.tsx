@@ -31,7 +31,7 @@ const syallbusAnalysisContent = [
 ];
 export function SyllabusAnalysisCard() {
     return (
-        <Card className="w-full">
+        <Card className="w-full bg-gray-100">
             <CardHeader className="p-6 lg:p-8">
                 <CardTitle className="text-base lg:text-lg 2xl:text-xl font-bold text-black">Syllabus Wise Analysis</CardTitle>
             </CardHeader>

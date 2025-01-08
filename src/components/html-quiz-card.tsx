@@ -12,7 +12,7 @@ export function HtmlQuizCard() {
 
     return (
         <>
-            <Card className="">
+            <Card className="w-full bg-gray-100">
                 <CardContent className="p-4 lg:py-6 lg:px-4 2xl:py-7 2xl:px-5 ">
                     <div className="flex items-start md:items-center justify-between gap-6">
                         <div className="flex flex-row gap-5 2xl:gap-8 items-start md:items-center">

@@ -111,6 +111,7 @@ const ChartTooltipContent = React.forwardRef<
       indicator?: "line" | "dot" | "dashed"
       nameKey?: string
       labelKey?: string
+    
     }
 >(
   (
@@ -128,6 +129,7 @@ const ChartTooltipContent = React.forwardRef<
       color,
       nameKey,
       labelKey,
+      innerClassName
     },
     ref
   ) => {
@@ -232,14 +234,14 @@ const ChartTooltipContent = React.forwardRef<
                         nestLabel ? "items-end" : "items-center"
                       )}
                     >
-                      <div className="grid gap-1.5 w-full">
+                      <div className="grid gap-1.5 w-full items-center">
                         {nestLabel ? tooltipLabel : null}
-                        <span className="text-neutral-500 dark:text-neutral-400">
+                        <span className={cn("text-neutral-500 dark:text-neutral-400",innerClassName)}>
                           {itemConfig?.label || item.name}
                         </span>
                       </div>
                       {item.value && (
-                        <span className="font-mono font-medium tabular-nums text-neutral-950 dark:text-neutral-50">
+                        <span className={cn("ml-1 font-mono font-medium tabular-nums text-blue-950 dark:text-neutral-50",innerClassName)}>
                           {item.value.toLocaleString()}
                         </span>
                       )}

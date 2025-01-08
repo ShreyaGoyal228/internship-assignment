@@ -41,7 +41,7 @@ export function QuestionAnalysisCard() {
         } satisfies ChartConfig
 
   return (
-    <Card className="w-full flex flex-col gap-4">
+    <Card className="w-full bg-gray-100 flex flex-col gap-4">
         <CardHeader className="flex flex-row items-center justify-between px-6 lg:px-8 pt-6 lg:pt-8">
                 <h2 className="text-base lg:text-lg 2xl:text-xl font-bold text-black">Question Analysis</h2>
                 <span className="text-sm lg:text-base 2xl:text-lg font-bold text-blue-600">{score}/{totalQuestions}</span>

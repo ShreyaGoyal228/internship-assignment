@@ -13,7 +13,7 @@ export function Sidebar() {
 
     return (
         <>
-            <aside className="hidden md:block md:w-[200px] lg:w-[300px] 2xl:w-[400px] bg-gray-100 min-h-screen py-6 pr-1 lg:pr-3 border-r sticky top-0">
+            <aside className="hidden md:block md:w-[200px] lg:w-[300px] 2xl:w-[400px] min-h-screen py-6 pr-1 lg:pr-3 border-r sticky top-0">
                 {sidebarItems.map((item) => (
                     <button
                         key={item.name}

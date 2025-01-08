@@ -26,7 +26,7 @@ function StatItem({ icon: Icon, iconColor, value, label }: StatItemProps) {
 export function QuickStatsCard() {
     const quizData=useScoreStore((state)=>state.quizData);
     return (
-        <Card className="w-full flex flex-col gap-3">
+        <Card className="w-full bg-gray-100 flex flex-col gap-3">
             <CardHeader className="px-4 pt-4 lg:pt-6">
                 <CardTitle className="text-base lg:text-lg 2xl:text-xl font-bold text-black">Quick Statistics</CardTitle>
             </CardHeader>
