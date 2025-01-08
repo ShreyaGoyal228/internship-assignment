@@ -33,7 +33,7 @@ export function HtmlQuizCard() {
                 </CardContent>
             </Card>
             <AlertDialog open={open} onOpenChange={setOpen}>
-                <AlertDialogContent aria-describedby="score-card-description" className="w-[60%] xl:w-1/2 2xl:w-[40%]">
+                <AlertDialogContent aria-describedby="score-card-description" className="w-[87%] md:w-[85%] lg:w-[60%] xl:w-1/2 2xl:w-[40%]">
                     <VisuallyHidden id="score-card-description">
                         <AlertDialogTitle>Update quiz score form</AlertDialogTitle>
                         <AlertDialogDescription>Update quiz scores and feedback for HTML assessment</AlertDialogDescription>
