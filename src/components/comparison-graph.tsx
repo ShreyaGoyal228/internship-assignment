@@ -24,7 +24,7 @@ export const ComparisonGraph = () => {
             color: "#875bea",
         }
     } satisfies ChartConfig
-    
+
     const { percentile } = useScoreStore((state) => state.quizData)
     return (
         <>
@@ -36,60 +36,70 @@ export const ComparisonGraph = () => {
                     <p className="text-gray-600 font-bold text-sm lg:text-base 2xl:text-lg
           ">
                         You scored {percentile}% percentile{" "}
-                        <span className="font-medium">which is {percentile<72 ? "lower then" : percentile==72?"equals to" : "greater then" } the average percentile 72% of all engineers who took this assesssment.</span>
+                        <span className="font-medium ">which is {percentile < 72 ? "lower then" : percentile == 72 ? "equals to" : "greater then"} the average percentile 72% of all engineers who took this assesssment.</span>
                     </p>
-                    <ChartContainer config={chartConfig} className="h-[200px] md:h-[250px] lg:h-[350px] w-full ">
-                        <LineChart
-                            data={percentileData}
-                        >
-                            <XAxis
-                                dataKey="percentile"
-                                tickLine={true}
-                                axisLine={true}
-                                ticks={["0", "25", "50", "75", "100"]}
-                                stroke="#000000"
-                            />
-                            <ChartTooltip
-                                cursor={false}
-                                
-                                content={<ChartTooltipContent hideIndicator innerClassName="text-[#875bea]" className=" border border-gray-400 border-opacity-50 rounded-none"/>}
-                            />
-                
-                            <svg>
-                                <defs>
-                                    <clipPath id="chartArea">
-                                        <rect x="0" y="0" width="100%" height="90%" />
-                                    </clipPath>
-                                </defs>
-                            </svg>
-                            <Line
-                                dataKey="students"
-                                type="monotone"
-                                stroke="var(--color-students)"
-                                strokeWidth={1}
-                                dot={{  
-                                    r: 3,
-                                }}
-                                activeDot={{
-                                    r: 5,
-                                }}
-                            />
+                    <div className="relative">
+                        <ChartContainer config={chartConfig} className="h-[200px] md:h-[250px] lg:h-[350px] w-full ">
+                            <LineChart
+                                data={percentileData}
+                            >
+                                <XAxis
+                                    dataKey="percentile"
+                                    tickLine={true}
+                                    axisLine={true}
+                                    ticks={["0", "25", "50", "75", "100"]}
+                                    stroke="#000000"
+                                />
+                                <ChartTooltip
+                                    cursor={false}
 
-                            <line
-                                x1={`${percentile}%`}
-                                y1="0"
-                                x2={`${percentile}%`}
-                                y2="90%"
-                                stroke="hsl(var(--muted-foreground))"
-                                strokeWidth={1}
-                                className="opacity-50"
-                                clipPath="url(#chartArea)"
-                            />
-                        </LineChart>
-                    </ChartContainer>
-                    {/* <div className="mt-2 text-sm text-muted-foreground text-center">
-          Your percentile: {percentile}
-        </div> */}
+                                    content={<ChartTooltipContent hideIndicator innerClassName="text-[#875bea]" className=" border border-gray-400 border-opacity-50 rounded-none" />}
+                                />
+
+                                {/* <svg>
+                                    <defs>
+                                        <clipPath id="chartArea">
+                                            <rect x="0" y="0" width="100%" height="90%" />
+                                        </clipPath>
+                                    </defs>
+                                </svg> */}
+                                <Line
+                                    dataKey="students"
+                                    type="monotone"
+                                    stroke="var(--color-students)"
+                                    strokeWidth={1}
+                                    dot={{
+                                        r: 3,
+                                    }}
+                                    activeDot={{
+                                        r: 5,
+                                    }}
+                                />
+
+                                <line
+                                    x1={`${percentile}%`}
+                                    y1="0"
+                                    x2={`${percentile}%`}
+                                    y2="90%"
+                                    stroke="#9ca3af"
+                                    strokeWidth={1}
+                                    className="opacity-50"
+                                    clipPath="url(#chartArea)"
+                                />
+                            </LineChart>
+                        </ChartContainer>
+                        <div
+                            className="absolute text-sm text-gray-500"
+                            style={{
+                                left: `${percentile}%`,
+                                top: '40px',
+                                transform: 'translateX(-50%)',
+
+                            }}
+                        >
+                            your percentile
+                        </div>
+                    </div>
                 </CardContent>
             </Card>
         </>
