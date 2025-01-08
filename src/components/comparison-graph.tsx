@@ -85,11 +85,12 @@ export const ComparisonGraph = () => {
                                     strokeWidth={1}
                                     className="opacity-50"
                                     clipPath="url(#chartArea)"
+                                    
                                 />
                             </LineChart>
                         </ChartContainer>
                         <div
-                            className="absolute text-sm text-gray-500"
+                            className="absolute text-sm text-gray-500 font-semibold"
                             style={{
                                 left: `${percentile}%`,
                                 top: '40px',
