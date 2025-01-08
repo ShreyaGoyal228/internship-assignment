@@ -11,7 +11,7 @@ type StatItemProps = {
 };
 function StatItem({ icon: Icon, iconColor, value, label }: StatItemProps) {
     return (
-        <div className="flex flex-row justify-between items-center w-full ">
+        <div className="flex flex-row justify-between w-full md:justify-start md:w-auto">
             <div className="bg-neutral-200 rounded-full p-2 lg:p-3 mr-2 lg:mr-3">
                 <Icon className={`size-5 xl:h-6 xl:w-6 ${iconColor}`} />
             </div>
@@ -31,7 +31,7 @@ export function QuickStatsCard() {
                 <CardTitle className="text-base lg:text-lg 2xl:text-xl font-bold text-black">Quick Statistics</CardTitle>
             </CardHeader>
             <CardContent className="px-4 pb-4 lg:pb-6">
-                <div className="flex flex-col md:flex-row gap-2 lg:gap-3 justify-between items-center sm:items-start px-1.5 lg:px-2 xl:px-2.5">
+                <div className="flex flex-col md:flex-row gap-2 lg:gap-3 md:justify-between items-center sm:items-start px-1.5 lg:px-2 xl:px-2.5">
                     <StatItem icon={Trophy} iconColor="text-yellow-500" value={`${quizData.rank}`} label="YOUR RANK" />
                     <Separator className="hidden md:block" orientation="vertical"  />
                     <StatItem icon={FileText} iconColor="text-gray-500" value={`${quizData.percentile} %`} label="PERCENTILE" />
