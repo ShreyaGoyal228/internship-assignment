@@ -32,19 +32,19 @@ const syallbusAnalysisContent = [
 export function SyllabusAnalysisCard() {
     return (
         <Card className="w-full">
-            <CardHeader className="p-8">
-                <CardTitle className="text-lg 2xl:text-xl font-bold text-black">Syllabus Wise Analysis</CardTitle>
+            <CardHeader className="p-6 lg:p-8">
+                <CardTitle className="text-base lg:text-lg 2xl:text-xl font-bold text-black">Syllabus Wise Analysis</CardTitle>
             </CardHeader>
-            <CardContent className="pb-12 px-8">
-                <div className="space-y-8">
+            <CardContent className="lg:pb-12 pb-10 px-6 lg:px-8">
+                <div className="space-y-6 lg:space-y-8">
                     {syallbusAnalysisContent.map((item, index) => (
                         <div key={index} className="flex flex-col gap-3 justify-start ">
-                            <div className="font-medium text-gray-500 text-lg 2xl:text-xl">{item.heading}</div>
+                            <div className="font-medium text-gray-500 text-sm lg:text-base 2xl:text-lg">{item.heading}</div>
                             <div className="flex items-center justify-between">
-                                <div className={`w-2/3 ${item.colorBarBg} rounded-full h-2.5`}>
-                                    <div className={`h-2.5 rounded-full ${item.colorBar}`} style={{ width: item.percentage }}></div>
+                                <div className={`w-2/3 ${item.colorBarBg} rounded-full h-1.5 md:h-2.5`}>
+                                    <div className={`h-1.5 md:h-2.5 rounded-full ${item.colorBar}`} style={{ width: item.percentage }}></div>
                                 </div>
-                                <div className={`text-base 2xl:text-xl font-bold ${item.colorText}`}>{item.percentage}</div>
+                                <div className={`text-sm lg:text-base 2xl:text-xl font-bold ${item.colorText}`}>{item.percentage}</div>
                             </div>
                         </div>
                     ))}

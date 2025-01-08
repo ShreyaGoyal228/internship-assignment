@@ -12,7 +12,7 @@ export function Header() {
         </div>
         <div className="flex items-center border-2 rounded-lg p-2">
           <User className="h-5 w-5 text-gray-500 mr-2" />
-          <span className="font-bold text-base">Shreya Goyal</span>
+          <span className="font-bold text-sm lg:text-base">Shreya Goyal</span>
         </div>
       </header>
     )

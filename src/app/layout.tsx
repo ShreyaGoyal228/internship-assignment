@@ -20,7 +20,7 @@ export default function RootLayout({
                 <Header />
                 <div className="flex items-start">
                     <Sidebar />
-                    <div className="p-8 2xl:p-9 w-full">{children}</div>
+                    <div className="p-5 lg:p-8 2xl:p-9 w-full">{children}</div>
                 </div>
             </body>
         </html>

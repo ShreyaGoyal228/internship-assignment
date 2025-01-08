@@ -13,15 +13,15 @@ export function HtmlQuizCard() {
     return (
         <>
             <Card className="">
-                <CardContent className="py-6 px-4 2xl:py-7 2xl:px-5 ">
-                    <div className="flex items-center justify-between gap-6">
-                        <div className="flex flex-row gap-5 2xl:gap-8 items-center">
-                            <div className="flex-shrink-0 size-[60px] 2xl:size-[80px] relative">
+                <CardContent className="p-4 lg:py-6 lg:px-4 2xl:py-7 2xl:px-5 ">
+                    <div className="flex items-start md:items-center justify-between gap-6">
+                        <div className="flex flex-row gap-5 2xl:gap-8 items-start md:items-center">
+                            <div className="flex-shrink-0 size-[50px] lg:size-[60px] 2xl:size-[80px] relative">
                                 <Image src="/html-logo.png" alt="HTML Logo" fill={true} className="rounded-md" />
                             </div>
                             <div className="flex flex-col gap-1">
-                                <h2 className="text-lg 2xl:text-xl font-bold text-black">Hyper Text Markup Language</h2>
-                                <p className="text-base 2xl:text-lg text-gray-600">Questions: 08 | Duration: 15mins | Submitted on 5 June 2021</p>
+                                <h2 className="text-base lg:text-lg 2xl:text-xl font-bold text-black">Hyper Text Markup Language</h2>
+                                <p className="text-sm lg:text-base 2xl:text-lg text-gray-600">Questions: 08 | Duration: 15mins | Submitted on 5 June 2021</p>
                             </div>
                         </div>
                         <Button variant="mainBtn" size="sm"
