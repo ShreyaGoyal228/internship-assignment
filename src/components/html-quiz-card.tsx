@@ -14,9 +14,9 @@ export function HtmlQuizCard() {
         <>
             <Card className="w-full bg-gray-100">
                 <CardContent className="p-4 lg:py-6 lg:px-4 2xl:py-7 2xl:px-5 ">
-                    <div className="flex items-start md:items-center justify-between gap-6">
+                    <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div className="flex flex-row gap-5 2xl:gap-8 items-start md:items-center">
-                            <div className="flex-shrink-0 size-[50px] lg:size-[60px] 2xl:size-[80px] relative">
+                            <div className="flex-shrink-0 size-[50px] md:size-[60px] 2xl:size-[80px] relative">
                                 <Image src="/html-logo.png" alt="HTML Logo" fill={true} className="rounded-md" />
                             </div>
                             <div className="flex flex-col gap-1">
