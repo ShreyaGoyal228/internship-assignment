@@ -17,7 +17,7 @@ export function HtmlQuizCard() {
                     <div className="flex flex-col md:flex-row md:items-center justify-between gap-6">
                         <div className="flex flex-row gap-5 2xl:gap-8 items-start md:items-center">
                             <div className="flex-shrink-0 size-[50px] md:size-[60px] 2xl:size-[80px] relative">
-                                <Image src="/html-logo.png" alt="HTML Logo" fill={true} className="rounded-md" />
+                                <Image src="/html-logo.png" alt="HTML Logo" fill={true} />
                             </div>
                             <div className="flex flex-col gap-1">
                                 <h2 className="text-base lg:text-lg 2xl:text-xl font-bold text-black">Hyper Text Markup Language</h2>

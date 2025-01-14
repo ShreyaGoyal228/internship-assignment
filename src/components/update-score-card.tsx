@@ -11,7 +11,7 @@ export function UpdateScoresCard({handleCloseDialog}:{handleCloseDialog:()=>void
                     <Image src="/html-logo.png" alt="HTML Logo" fill objectFit="contain" />
                 </div>
             </CardHeader>
-            <CardContent className="space-y-4">
+            <CardContent>
                 <UpdateScoreForm handleClose={handleCloseDialog}/>
             </CardContent>
         </Card>

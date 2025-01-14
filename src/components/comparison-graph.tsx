@@ -38,7 +38,7 @@ export const ComparisonGraph = () => {
                         You scored {percentile}% percentile{" "}
                         <span className="font-medium ">which is {percentile < 72 ? "lower then" : percentile == 72 ? "equals to" : "greater then"} the average percentile 72% of all engineers who took this assesssment.</span>
                     </p>
-                    <div className="relative">
+                    <div className="relative ">
                         <ChartContainer config={chartConfig} className="h-[200px] md:h-[250px] lg:h-[350px] w-full ">
                             <LineChart
                                 data={percentileData}
@@ -52,17 +52,9 @@ export const ComparisonGraph = () => {
                                 />
                                 <ChartTooltip
                                     cursor={false}
-
                                     content={<ChartTooltipContent hideIndicator innerClassName="text-[#875bea]" className=" border border-gray-400 border-opacity-50 rounded-none" />}
                                 />
 
-                                {/* <svg>
-                                    <defs>
-                                        <clipPath id="chartArea">
-                                            <rect x="0" y="0" width="100%" height="90%" />
-                                        </clipPath>
-                                    </defs>
-                                </svg> */}
                                 <Line
                                     dataKey="students"
                                     type="monotone"
@@ -75,17 +67,15 @@ export const ComparisonGraph = () => {
                                         r: 5,
                                     }}
                                 />
-
                                 <line
                                     x1={`${percentile}%`}
                                     y1="0"
                                     x2={`${percentile}%`}
                                     y2="90%"
-                                    stroke="#9ca3af"
+                                    stroke="#6b7280"
                                     strokeWidth={1}
-                                    className="opacity-50"
-                                    clipPath="url(#chartArea)"
-                                    
+                                    className="opacity-40"
+
                                 />
                             </LineChart>
                         </ChartContainer>
